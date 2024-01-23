@@ -32,6 +32,7 @@
 
 main {
   width: 400px;
+  margin: 0 auto;
 }
 
 .display {
@@ -39,11 +40,13 @@ main {
   font-size: 4rem;
   width: 130px;
   text-align: center;
+  border-radius: 0.5rem;
 }
 
 button {
   width: 100px;
   margin-top: 2rem;
+  border-radius: 0.5rem;
 }
 
 .display-container {
