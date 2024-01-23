@@ -38,7 +38,7 @@ main {
 .display {
   font-family: "digital-7regular", sans-serif;
   font-size: 4rem;
-  width: 130px;
+  /* width: 280px; */
   text-align: center;
   border-radius: 0.5rem;
 }

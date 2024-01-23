@@ -10,29 +10,21 @@ function Time() {
   let second = date.getSeconds();
   let period = "";
 
-  if (hour == 0) {
-    hour = 12;
-  } else {
-    if (hour > 12) {
-      hour = hour - 12;
-    }
-  }
+  //   hour = update(hour);
+  //   minute = update(minute);
+  //   second = update(second);
 
-  hour = update(hour);
-  minute = update(minute);
-  second = update(second);
-
-  display.innerText = hour + " : " + minute + " : " + second + " " + period;
+  display.value = hour + ":" + minute + ":" + second;
 
   setTimeout(Time, 1000);
 }
 
-function update(t) {
-  if (t < 10) {
-    return "0" + t;
-  } else {
-    return t;
-  }
-}
+// function update(t) {
+//   if (t < 10) {
+//     return "0" + t;
+//   } else {
+//     return t;
+//   }
+// }
 
 Time();
