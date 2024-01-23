@@ -30,12 +30,26 @@
   font-style: normal;
 }
 
+main {
+  width: 400px;
+}
+
 .display {
   font-family: "digital-7regular", sans-serif;
   font-size: 4rem;
+  width: 130px;
+  text-align: center;
 }
 
 button {
   width: 100px;
   margin-top: 2rem;
+}
+
+.display-container {
+  width: 400px;
+}
+
+form {
+  width: 100%;
 }
