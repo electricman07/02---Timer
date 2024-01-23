@@ -34,3 +34,8 @@
   font-family: "digital-7regular", sans-serif;
   font-size: 4rem;
 }
+
+button {
+  width: 100px;
+  margin-top: 2rem;
+}
