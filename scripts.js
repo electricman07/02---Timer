@@ -30,7 +30,50 @@ function Time() {
 Time();
 
 // Countdown Timer
-const daysElement = document.getElementById("days");
-const hoursElement = document.getElementById("hours");
+const btnTimeElement = document.querySelector('[data-action="time"]');
+const btnStartElement = document.querySelector('[data-action="start"]');
+const btnSetElement = document.querySelector('[data-action="set"]');
 const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
+let timerTime = 0;
+let interval;
+
+const startTimer = () => {
+  isRunning = true;
+  interval = setInterval(incrementTImer, -1000);
+};
+
+const stopTimer = () => {
+  isRunning = false;
+  clearInterval(interval);
+};
+
+const setTimer = () => {
+  minutesElement.innerText = "00";
+  secondsElement.innerText = "00";
+};
+
+const pad = (number) => {
+  return number < 10 ? "0" + number : number;
+};
+
+const decrementTimer = () => {
+  timerTime--;
+
+  const numberMinutes = Math.floor(timerTime / 60);
+  const numberSeconds = timerTime % 60;
+
+  minutesElement.innerText = pad(numberMinutes);
+  secondsElement.innerText = pad(numberSeconds);
+};
+
+btnTimeElement.addEventListener("click", showTime);
+
+btnStartElement.addEventListener(
+  "click",
+  (timerStart = () => {
+    isRunning === false ? startTimer() : stopTimer();
+  })
+);
+
+btnSetElement.addEventListener("click", setTimer);
