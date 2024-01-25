@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <main class="container">
-        <h1>Countdown Timer and Clock</h1>
+        <h1>Timer and Clock</h1>
         <div class="display-container">
-            <form>
-                <input type="time" class="display" value="12:30:00">
-                <div id="countdown-container">
-                    
-                    <span id="minutes">00</span>
-                    <span id="seconds">00</span>
+            <div class="dropdown">
+                <div class="title pointerCursor flex">
+                    <span class="time">
+                        
+                    </span> 
+                    <div class="flex-stopwatch">
+                        <span class="stopwatch"> Stopwatch</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </div>
+                
+                <div class="menu hide pointerCursor stopwatch-container">
+                    <div class="option">
+                        <span id="hour">00</span>
+                        :
+                        <span id="minutes">00</span>
+                        :
+                        <span id="seconds">00</span>
+                        :
+                        <span id="count">000</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="start" id="start" data-action="start">Start</button>
+                        <button class="stop" id="stopt" data-action="stop">Stop</button>
+                        <button class="reset" id="reset" data-action="reset">Reset</button>
+                    </div>
                 </div>
-                <div class="div btn-container">
-                    <button class="time" data-action="time">Time</button>
-                    <button class="start" data-action="start">Start / Stop</button>
-                    <button class="set" data-action="set">Set</button>
-                </div>
-            </form>
+                
+                
+                
+            </div>
             
         </div>
+        
     </main>
     <script src="./scripts.js"></script>
 </body>
